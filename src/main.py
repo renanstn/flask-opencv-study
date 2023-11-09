@@ -11,6 +11,7 @@ app.config["UPLOAD_FOLDER"] = "uploads"
 def hello_world():
     return "<p>Hello, World!</p>"
 
+
 @app.route("/index", methods=["GET", "POST"])
 def index():
     if request.method == "GET":
@@ -24,6 +25,7 @@ def index():
         gray_image = cv2.cvtColor(imgage, cv2.COLOR_BGR2GRAY)
         cv2.imwrite(file_path, gray_image)
         return render_template("index.html", filename=filename)
+
 
 @app.route("/download/<filename>", methods=["GET"])
 def download_file(filename):
