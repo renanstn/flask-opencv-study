@@ -1,0 +1,9 @@
+services:
+  flask:
+    build:
+      context: ./src
+      target: development
+    volumes:
+      - ./src:/app
+    ports:
+      - "5000:5000"
