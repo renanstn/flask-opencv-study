@@ -6,13 +6,20 @@ Projetinho absolutamente simples, um botão de upload de imagem, o flask recebe
 essa imagem, a converte para escalas de cinza usando openCV, e fornece um link
 para download da imagem convertida.
 
-## Iniciando
+## Desenvolvimento
 
-- Acesse a pasta `src/`
+### Pré requisitos:
+
+- Docker
+- Docker compose
+
+### Subindo o ambiente
 
 ```sh
-flask --app main run --host=0.0.0.0 --debug
+docker-compose up
 ```
+
+- Acesse: http://127.0.0.1:5000/
 
 ## Formatação automática com black
 
