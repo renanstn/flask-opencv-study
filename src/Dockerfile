@@ -16,5 +16,5 @@ FROM base AS development
 CMD [ "flask", "--app", "main", "run", "--host=0.0.0.0", "--debug" ]
 
 FROM base AS production
-RUN chmod +x run_prod.sh
+RUN chmod +x run_prod.sh && mkdir uploads
 CMD [ "./run_prod.sh" ]
