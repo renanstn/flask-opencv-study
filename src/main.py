@@ -9,7 +9,7 @@ app.config["UPLOAD_FOLDER"] = "uploads"
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return "<p>Hello, World!<br>Go to <a href='/index'>/index</a>!</p>"
 
 
 @app.route("/index", methods=["GET", "POST"])
